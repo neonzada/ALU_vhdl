@@ -1,0 +1,7 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY decoder IS
+	a: in std_logic_vector (3 downto 0);
+	output1, output2: out std_logic_vector (6 downto 0);
+END decoder;

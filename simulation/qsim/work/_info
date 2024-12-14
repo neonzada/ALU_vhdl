@@ -1,0 +1,123 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\ULA\simulation\qsim
+vsumsub
+Z1 !s100 ?Jo@bXEJz8bznWcaB3zQ;3
+Z2 Ikij_`omHQ==FiU>XFk?G20
+Z3 Ve9[ddagQW08]:a_F^h][N1
+Z4 dC:\Users\Pichau\Desktop\ULA\simulation\qsim
+Z5 w1710453313
+Z6 8ULAcompleta.vo
+Z7 FULAcompleta.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|ULAcompleta.vo|
+Z10 o-work work -O0
+Z11 !s108 1710453314.390000
+Z12 !s107 ULAcompleta.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vsumsub_vlg_sample_tst
+Z13 !s100 jk7]D63FKl=Bc0o4CFNkG3
+Z14 IlImPO_l<Q1N9US=5^3:i03
+Z15 VnA3_BbZncn5[LSUK4IRkl2
+R4
+R5
+Z16 8ULAcompleta.vt
+Z17 FULAcompleta.vt
+L0 29
+R8
+r1
+31
+Z18 !s90 -work|work|ULAcompleta.vt|
+R10
+Z19 !s108 1710453314.444000
+Z20 !s107 ULAcompleta.vt|
+!i10b 1
+!s85 0
+!s101 -O0
+vULAcompleta
+Z21 I5b:dZ3ROj]k^ZnPQDN;j^3
+Z22 VX3?eTb=Ri6mh<EEFT]0az0
+Z23 dC:\Users\alunos\Downloads\ULA - Allan e Otavio\ULA - Allan e Otavio\simulation\qsim
+Z24 w1710517165
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z25 n@u@l@acompleta
+!i10b 1
+Z26 !s100 aD;2AF_OB7:27XP5b>Im`1
+!s85 0
+Z27 !s108 1710517168.338000
+R12
+!s101 -O0
+vULAcompleta_vlg_check_tst
+!i10b 1
+Z28 !s100 zzlAl1Q8@BKGH`gB35`ea1
+Z29 IQ0T_[heaRmRVUIm2aOlT>2
+Z30 VI=D3:e]zjQhkI@^7IYADz2
+R23
+Z31 w1710517164
+R16
+R17
+L0 61
+R8
+r1
+!s85 0
+31
+Z32 !s108 1710517168.432000
+Z33 !s107 ULAcompleta.vt|
+R18
+!s101 -O0
+R10
+Z34 n@u@l@acompleta_vlg_check_tst
+vULAcompleta_vlg_sample_tst
+!i10b 1
+Z35 !s100 GNeYNX6HUfX`>ooV]RN4m2
+Z36 I0HFEMY9=Hz5K4EW2d6Sgi1
+Z37 V_n47i2ineQD`DEU<Z_U_h3
+R23
+R31
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R32
+R33
+R18
+!s101 -O0
+R10
+Z38 n@u@l@acompleta_vlg_sample_tst
+vULAcompleta_vlg_vec_tst
+!i10b 1
+Z39 !s100 IWgD:9bUXLMCCQNXf8>``2
+Z40 I`4K@ZzHV?E>[Q@egU:b5U3
+Z41 VO_:M85C3cEc78EQ5H:PL]0
+R23
+R31
+R16
+R17
+Z42 L0 577
+R8
+r1
+!s85 0
+31
+R32
+R33
+R18
+!s101 -O0
+R10
+Z43 n@u@l@acompleta_vlg_vec_tst

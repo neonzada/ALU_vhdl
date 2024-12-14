@@ -1,0 +1,360 @@
+|ULAcompleta
+a[0] => sumsub:M0.a[0]
+a[0] => shifter:M1.a[0]
+a[0] => andgate:M2.a[0]
+a[0] => orgate:M3.a[0]
+a[0] => notgate:M4.a[0]
+a[1] => sumsub:M0.a[1]
+a[1] => shifter:M1.a[1]
+a[1] => andgate:M2.a[1]
+a[1] => orgate:M3.a[1]
+a[1] => notgate:M4.a[1]
+a[2] => sumsub:M0.a[2]
+a[2] => shifter:M1.a[2]
+a[2] => andgate:M2.a[2]
+a[2] => orgate:M3.a[2]
+a[2] => notgate:M4.a[2]
+a[3] => sumsub:M0.a[3]
+a[3] => shifter:M1.a[3]
+a[3] => andgate:M2.a[3]
+a[3] => orgate:M3.a[3]
+a[3] => notgate:M4.a[3]
+b[0] => sumsub:M0.b[0]
+b[0] => andgate:M2.b[0]
+b[0] => orgate:M3.b[0]
+b[1] => sumsub:M0.b[1]
+b[1] => andgate:M2.b[1]
+b[1] => orgate:M3.b[1]
+b[2] => sumsub:M0.b[2]
+b[2] => andgate:M2.b[2]
+b[2] => orgate:M3.b[2]
+b[3] => sumsub:M0.b[3]
+b[3] => andgate:M2.b[3]
+b[3] => orgate:M3.b[3]
+sel[0] => sumsub:M0.sel
+sel[0] => shifter:M1.shift
+sel[0] => mux81:M5.sel[0]
+sel[1] => mux81:M5.sel[1]
+sel[2] => mux81:M5.sel[2]
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+v <= comb.DB_MAX_OUTPUT_PORT_TYPE
+z <= zerodetect:M6.output
+n <= mux81:M5.output[3]
+disp1[0] <= decoder:M7.output1[0]
+disp1[1] <= decoder:M7.output1[1]
+disp1[2] <= decoder:M7.output1[2]
+disp1[3] <= decoder:M7.output1[3]
+disp1[4] <= decoder:M7.output1[4]
+disp1[5] <= decoder:M7.output1[5]
+disp1[6] <= decoder:M7.output1[6]
+disp2[0] <= decoder:M7.output2[0]
+disp2[1] <= decoder:M7.output2[1]
+disp2[2] <= decoder:M7.output2[2]
+disp2[3] <= decoder:M7.output2[3]
+disp2[4] <= decoder:M7.output2[4]
+disp2[5] <= decoder:M7.output2[5]
+disp2[6] <= decoder:M7.output2[6]
+outwave[0] <= mux81:M5.output[0]
+outwave[1] <= mux81:M5.output[1]
+outwave[2] <= mux81:M5.output[2]
+outwave[3] <= mux81:M5.output[3]
+
+
+|ULAcompleta|sumsub:M0
+a[0] => fulladder:F0.a
+a[1] => fulladder:F1.a
+a[2] => fulladder:F2.a
+a[3] => fulladder:F3.a
+b[0] => comb.IN0
+b[1] => comb.IN0
+b[2] => comb.IN0
+b[3] => comb.IN0
+sel => comb.IN1
+sel => comb.IN1
+sel => comb.IN1
+sel => comb.IN1
+sel => fulladder:F0.c_in
+output[0] <= fulladder:F0.s
+output[1] <= fulladder:F1.s
+output[2] <= fulladder:F2.s
+output[3] <= fulladder:F3.s
+
+
+|ULAcompleta|sumsub:M0|fulladder:F0
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|sumsub:M0|fulladder:F1
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|sumsub:M0|fulladder:F2
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|sumsub:M0|fulladder:F3
+a => s.IN0
+a => c_out.IN0
+a => c_out.IN0
+b => s.IN1
+b => c_out.IN1
+b => c_out.IN0
+c_in => s.IN1
+c_in => c_out.IN1
+c_in => c_out.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= c_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|shifter:M1
+a[0] => mux:Ml0.a
+a[0] => mux:Ml1.b
+a[1] => mux:Ml1.a
+a[1] => mux:Ml2.b
+a[2] => mux:Ml2.a
+a[2] => mux:Ml3.b
+a[3] => mux:Ml3.a
+shift => mux:Ml0.sel
+shift => mux:Ml1.sel
+shift => mux:Ml2.sel
+shift => mux:Ml3.sel
+shift => mux:Mr0.sel
+shift => mux:Mr1.sel
+shift => mux:Mr2.sel
+shift => mux:Mr3.sel
+output[0] <= mux:Mr0.output
+output[1] <= mux:Mr1.output
+output[2] <= mux:Mr2.output
+output[3] <= mux:Mr3.output
+
+
+|ULAcompleta|shifter:M1|mux:Ml0
+a => output.DATAB
+b => output.DATAA
+sel => output.OUTPUTSELECT
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|shifter:M1|mux:Ml1
+a => output.DATAB
+b => output.DATAA
+sel => output.OUTPUTSELECT
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|shifter:M1|mux:Ml2
+a => output.DATAB
+b => output.DATAA
+sel => output.OUTPUTSELECT
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|shifter:M1|mux:Ml3
+a => output.DATAB
+b => output.DATAA
+sel => output.OUTPUTSELECT
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|shifter:M1|mux:Mr0
+a => output.DATAB
+b => output.DATAA
+sel => output.OUTPUTSELECT
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|shifter:M1|mux:Mr1
+a => output.DATAB
+b => output.DATAA
+sel => output.OUTPUTSELECT
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|shifter:M1|mux:Mr2
+a => output.DATAB
+b => output.DATAA
+sel => output.OUTPUTSELECT
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|shifter:M1|mux:Mr3
+a => output.DATAB
+b => output.DATAA
+sel => output.OUTPUTSELECT
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|andgate:M2
+a[0] => output.IN0
+a[1] => output.IN0
+a[2] => output.IN0
+a[3] => output.IN0
+b[0] => output.IN1
+b[1] => output.IN1
+b[2] => output.IN1
+b[3] => output.IN1
+output[0] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|orgate:M3
+a[0] => output.IN0
+a[1] => output.IN0
+a[2] => output.IN0
+a[3] => output.IN0
+b[0] => output.IN1
+b[1] => output.IN1
+b[2] => output.IN1
+b[3] => output.IN1
+output[0] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|notgate:M4
+a[0] => output[0].DATAIN
+a[1] => output[1].DATAIN
+a[2] => output[2].DATAIN
+a[3] => output[3].DATAIN
+output[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|mux81:M5
+a[0] => Mux3.IN0
+a[1] => Mux2.IN0
+a[2] => Mux1.IN0
+a[3] => Mux0.IN0
+b[0] => Mux3.IN1
+b[1] => Mux2.IN1
+b[2] => Mux1.IN1
+b[3] => Mux0.IN1
+c[0] => Mux3.IN2
+c[1] => Mux2.IN2
+c[2] => Mux1.IN2
+c[3] => Mux0.IN2
+d[0] => Mux3.IN3
+d[1] => Mux2.IN3
+d[2] => Mux1.IN3
+d[3] => Mux0.IN3
+e[0] => Mux3.IN4
+e[1] => Mux2.IN4
+e[2] => Mux1.IN4
+e[3] => Mux0.IN4
+f[0] => Mux3.IN5
+f[1] => Mux2.IN5
+f[2] => Mux1.IN5
+f[3] => Mux0.IN5
+g[0] => Mux3.IN6
+g[1] => Mux2.IN6
+g[2] => Mux1.IN6
+g[3] => Mux0.IN6
+h[0] => Mux3.IN7
+h[1] => Mux2.IN7
+h[2] => Mux1.IN7
+h[3] => Mux0.IN7
+sel[0] => Mux0.IN10
+sel[0] => Mux1.IN10
+sel[0] => Mux2.IN10
+sel[0] => Mux3.IN10
+sel[1] => Mux0.IN9
+sel[1] => Mux1.IN9
+sel[1] => Mux2.IN9
+sel[1] => Mux3.IN9
+sel[2] => Mux0.IN8
+sel[2] => Mux1.IN8
+sel[2] => Mux2.IN8
+sel[2] => Mux3.IN8
+output[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|zerodetect:M6
+a[0] => output.IN0
+a[1] => output.IN1
+a[2] => output.IN1
+a[3] => output.IN1
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ULAcompleta|decoder:M7
+a[0] => Mux0.IN19
+a[0] => Mux1.IN19
+a[0] => Mux2.IN10
+a[0] => Mux3.IN10
+a[0] => Mux4.IN19
+a[0] => Mux5.IN19
+a[0] => Mux6.IN19
+a[1] => Mux0.IN18
+a[1] => Mux1.IN18
+a[1] => Mux2.IN9
+a[1] => Mux3.IN9
+a[1] => Mux4.IN18
+a[1] => Mux5.IN18
+a[1] => Mux6.IN18
+a[2] => Mux0.IN17
+a[2] => Mux1.IN17
+a[2] => Mux2.IN8
+a[2] => Mux3.IN8
+a[2] => Mux4.IN17
+a[2] => Mux5.IN17
+a[2] => Mux6.IN17
+a[3] => Mux0.IN16
+a[3] => Mux1.IN16
+a[3] => Mux4.IN16
+a[3] => Mux5.IN16
+a[3] => Mux6.IN16
+a[3] => output1[6].DATAIN
+output1[0] <= <VCC>
+output1[1] <= <VCC>
+output1[2] <= <VCC>
+output1[3] <= <VCC>
+output1[4] <= <VCC>
+output1[5] <= <VCC>
+output1[6] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+output2[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output2[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output2[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output2[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output2[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output2[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output2[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

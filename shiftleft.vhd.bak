@@ -1,0 +1,35 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+--Iuri Schwartz e João Pedro Valente 
+ENTITY SL IS
+	PORT(
+		a: in std_logic_vector(3 downto 0);
+		desloca, entrada: in std_logic;
+		s: out std_logic_vector(3 downto 0)
+		);
+end SL;
+
+architecture arq_SL of SL is
+	
+COMPONENT muxsimples
+	PORT(
+		a, b, sel: in std_logic;
+		s: out std_logic
+		);
+end COMPONENT;
+	
+	begin
+	muxs1: muxsimples
+		port map(a => entrada, sel => desloca, s => s(0), b => a(0));
+		
+	muxs2: muxsimples
+		port map(a => a(0), sel => desloca, s => s(1), b => a(1));
+		
+	muxs3: muxsimples
+		port map(a => a(1), sel => desloca, s => s(2), b => a(2));
+		
+	muxs4: muxsimples
+		port map(a => a(2), sel => desloca, s => s(3), b => a(3));
+
+	
+end arq_SL;

@@ -1,0 +1,8 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY mux IS
+PORT(
+	a, b: in std_logic;
+);
+END mux;
